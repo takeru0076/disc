@@ -4,6 +4,11 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\KindController;
+use App\Http\Controllers\OtherController;
+use App\Http\Controllers\RuleController;
+use App\Http\Controllers\StrategyController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +20,86 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::group(["middleware" => ["auth"]], function() {
+
+   //Route::get("/home", function() {
+       //return Inertia::render("Front/Home");
+   //}) ;
+   Route::get("/home", [HomeController::class, "home"]);
+});
+
+Route::group(["middleware" => ["auth"]], function() {
+    
+     Route::get("/home/strategy", [StrategyController::class, "strategy"]);
+     
+     Route::post("/home/strategy", [StrategyController::class, "store"]);
+     
+     Route::get("/home/strategy/create", [StrategyController::class, "create"]);
+     
+     Route::get("/home/strategy/{strategy}", [StrategyController::class, "show"]);
+     
+     Route::get('/home/strategy/{strategy}/edit', [StrategyController::class, "edit"]);
+     
+     Route::put('/home/strategy/{strategy}', [StrategyController::class, "update"]);
+     
+     Route::delete("/home/strategy/{strategy}", [StrategyController::class, "delete"]);
+
+});
+
+Route::group(["middleware" => ["auth"]], function() {
+    
+     Route::get("/home/kind", [KindController::class, "kind"]);
+    
+     Route::post("/home/kind", [KindController::class, "store"]);
+     
+     Route::get("/home/kind/create", [KindController::class, "create"]);
+     
+     Route::get("/home/kind/{kind}", [KindController::class, "show"]);
+     
+     Route::get('/home/kind/{kind}/edit', [KindController::class, "edit"]);
+     
+     Route::put('/home/kind/{kind}', [KindController::class, "update"]);
+     
+     Route::delete("/home/kind/{kind}", [KindController::class, "delete"]);
+
+});
+
+Route::group(["middleware" => ["auth"]], function() {
+    
+     Route::get("/home/rule", [RuleController::class, "rule"]);
+    
+     Route::post("/home/rule", [RuleController::class, "store"]);
+     
+     Route::get("/home/rule/create", [RuleStrategyController::class, "create"]);
+     
+     Route::get("/home/rule/{rule}", [RuleController::class, "show"]);
+     
+     Route::get('/home/rule/{rule}/edit', [RuleController::class, "edit"]);
+     
+     Route::put('/home/rule/{rule}', [RuleController::class, "update"]);
+     
+     Route::delete("/home/rule/{rule}", [RuleController::class, "delete"]);
+
+});
+
+Route::group(["middleware" => ["auth"]], function() {
+
+     Route::get("/home/other", [OtherController::class, "other"]);
+    
+     Route::post("/home/other", [OtherController::class, "store"]);
+     
+     Route::get("/home/other/create", [OtherStrategyController::class, "create"]);
+     
+     Route::get("/home/other/{other}", [OtherController::class, "show"]);
+     
+     Route::get('/home/other/{other}/edit', [OtherController::class, "edit"]);
+     
+     Route::put('/home/other/{other}', [OtherController::class, "update"]);
+     
+     Route::delete("/home/other/{other}", [OtherController::class, "delete"]);
+
+});
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
