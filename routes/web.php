@@ -89,7 +89,7 @@ Route::group(["middleware" => ["auth"]], function() {
     
      Route::post("/home/other", [OtherController::class, "store"]);
      
-     Route::get("/home/other/create", [OtherStrategyController::class, "create"]);
+     Route::get("/home/other/create", [OtherController::class, "create"]);
      
      Route::get("/home/other/{other}", [OtherController::class, "show"]);
      
