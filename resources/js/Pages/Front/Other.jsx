@@ -26,7 +26,7 @@ const Other = (props) => {
                 { others.map((other) => (
                     <div key={other.id}>
                         <h2>
-                            <Link href={`/home//other/${other.id}`}>{ other.name }</Link>
+                            <Link href={`/home//other/${other.id}`}>{ other.title }</Link>
                         </h2>
                         <p>{ other.text }</p>
                         <a href={other.url}>url</a>

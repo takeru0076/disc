@@ -71,7 +71,7 @@ Route::group(["middleware" => ["auth"]], function() {
     
      Route::post("/home/rule", [RuleController::class, "store"]);
      
-     Route::get("/home/rule/create", [RuleStrategyController::class, "create"]);
+     Route::get("/home/rule/create", [RuleController::class, "create"]);
      
      Route::get("/home/rule/{rule}", [RuleController::class, "show"]);
      
