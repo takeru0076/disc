@@ -5,23 +5,30 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Strategy;
+use App\Models\Kind;
+use App\Models\User;
 use App\Http\Requests\StrategyRequest;
+use Illuminate\Support\Facades\Auth;
 
 class StrategyController extends Controller
 {
     public function strategy(Strategy $strategy)
     {
-        return Inertia::render("Front/Strategy",["strategies" => $strategy->get()]);
+        return Inertia::render("Front/Strategy",["strategies" => $strategy::with("kind")->get()]);
     }
     
-    public function create()
+    public function create(Kind $kind)
     {
-         return Inertia::render("Front/Create_s");
+         return Inertia::render("Front/Create_s",["kinds" => $kind->get()]);
     }
     
     public function store(StrategyRequest $request, Strategy $strategy)
     {
         $input = $request->all();
+        $user = Auth::user();
+        //dd($user->id);
+        $input += ["user_id" => $user->id];
+        //dd($input);
         $strategy->fill($input)->save();
         //dd($strategy->id);
         return redirect("/home/strategy/" . $strategy->id);
@@ -29,7 +36,7 @@ class StrategyController extends Controller
     
         public function show(Strategy $strategy)
     {
-        return Inertia::render("Front/Show_s", ["strategy" => $strategy]);
+        return inertia("Front/Show_s", ["strategy" => $strategy->load('kind')]);
     }
     
     

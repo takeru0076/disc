@@ -29,6 +29,8 @@ const Strategy = (props) => {
                             <Link href={`/home//strategy/${strategy.id}`}>{ strategy.name }</Link>
                         </h2>
                         <p>{ strategy.text }</p>
+                        <p>{ strategy.name }</p>
+                        
                         
                         <button className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md" onClick={() => handleDeleteStrategy(strategy.id)}>delete</button>
                     </div>

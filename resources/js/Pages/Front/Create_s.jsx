@@ -4,9 +4,11 @@ import Authenticated from "@/Layouts/AuthenticatedLayout";
 
 const Create = (props) => {
     // postを追加
+    const {kinds} = props;
     const {data, setData, post} = useForm({
         name: "",
-        text: ""
+        text: "",
+        kind_id: kinds[0].id
     })
     
     // 送信用関数を追加
@@ -36,6 +38,15 @@ const Create = (props) => {
                         <h2>text</h2>
                         <textarea placeholder="今日も1日お疲れさまでした。" onChange={(e) => setData("text", e.target.value)}></textarea>
                         <span className="text-red-600">{props.errors.text}</span>
+                    </div>
+                    
+                    <div>
+                        <h2>Kind</h2>
+                        <select onChange={e => setData("kind_id", e.target.value)}>
+                        {kinds.map((kind) => (
+                            <option value={kind.id}>{kind.name}</option>
+                        ))}
+                        </select>
                     </div>
                                     
                     <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md">send</button>

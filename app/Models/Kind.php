@@ -12,4 +12,9 @@ class kind extends Model
      protected $fillable = [
         "name"
     ];
+    
+        public function strategies()   
+    {
+        return $this->hasMany(Strategy::class);  
+    }
 }

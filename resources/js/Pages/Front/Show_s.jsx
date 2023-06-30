@@ -21,6 +21,10 @@ const Show = (props) => {
                 </div>
                 
                 <div>
+                    <p>{ strategy.kind.name }</p>
+                </div>
+                
+                <div>
                     <Link href={`/home/strategy/${strategy.id}/edit`}>編集</Link>
                 </div>
                 

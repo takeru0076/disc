@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('kinds', function (Blueprint $table) {
-            $table->timestamps();
+        Schema::table('strategies', function (Blueprint $table) {
+            $table->foreignId('kind_id')->constrained("kinds");
         });
     }
 
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('kinds', function (Blueprint $table) {
+        Schema::table('strategies', function (Blueprint $table) {
             //
         });
     }
