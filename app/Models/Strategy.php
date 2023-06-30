@@ -11,6 +11,18 @@ class strategy extends Model
     
      protected $fillable = [
         "name",
-        "text"
+        "text",
+        "kind_id",
+        "user_id"
     ];
+    
+        public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    
+        public function kind()
+    {
+        return $this->belongsTo(Kind::class);
+    }
 }
