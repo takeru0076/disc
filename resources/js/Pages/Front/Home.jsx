@@ -1,5 +1,6 @@
 import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
+import Box from '@mui/material/Box';
 
 const Home = (props) => {
     const { posts } = props; // 追加
@@ -19,6 +20,17 @@ const Home = (props) => {
                         <p>This is a simple body.</p>
                     </div>
                 </div>
+                <Box
+                  sx={{
+                    width: 300,
+                    height: 300,
+                    backgroundColor: 'primary.dark',
+                    '&:hover': {
+                      backgroundColor: 'primary.main',
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                />
             </div>
             
         </Authenticated>
