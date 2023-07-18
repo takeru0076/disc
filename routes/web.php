@@ -21,6 +21,10 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+//Route::get('/{any}', function () {
+  //  return view('app');
+//})->where('any', '.*');    この3行をコメントアウト
+
 Route::group(["middleware" => ["auth"]], function() {
 
    //Route::get("/home", function() {
@@ -31,7 +35,7 @@ Route::group(["middleware" => ["auth"]], function() {
 
 Route::group(["middleware" => ["auth"]], function() {
     
-     Route::get("/home/strategy", [StrategyController::class, "strategy"]);
+     Route::get("/home/strategy", [StrategyController::class, "strategy"])->name('home.strategy');
      
      Route::post("/home/strategy", [StrategyController::class, "store"]);
      
