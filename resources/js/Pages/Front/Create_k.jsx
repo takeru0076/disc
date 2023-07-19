@@ -31,7 +31,7 @@ const Create = (props) => {
                         <span className="text-red-600">{props.errors.name}</span>
                     </div>                    
                                     
-                    <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md">send</button>
+                    <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md my-2.5">send</button>
                 </form>
                 
                 <Link href="/home/kind">戻る</Link>
