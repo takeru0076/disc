@@ -16,6 +16,8 @@ const Create = (props) => {
         e.preventDefault();
         post("/home/strategy");
     }
+    
+    console.log(data);
 
     return (
         <Authenticated auth={props.auth} header={
@@ -24,23 +26,19 @@ const Create = (props) => {
                 </h2>
             }>
             
-            <div className="p-12">
+            <div className="p-12 flex flex-col flex items-center flex flex-col">
                 
                 {/* onSubmitを追記し、送信用関数を設定 */}
                 <form onSubmit={handleSendStrategies}>
-                    <div>
+                    <div classname="flex flex-col flex items-center">
                         <h2>name</h2>
                         <input type="text" placeholder="タイトル" onChange={(e) => setData("name", e.target.value)}/>
                         <span className="text-red-600">{props.errors.name}</span>
-                    </div>                    
                                     
-                    <div>
                         <h2>text</h2>
                         <textarea placeholder="今日も1日お疲れさまでした。" onChange={(e) => setData("text", e.target.value)}></textarea>
                         <span className="text-red-600">{props.errors.text}</span>
-                    </div>
                     
-                    <div>
                         <h2>Kind</h2>
                         <select onChange={e => setData("kind_id", e.target.value)}>
                         {kinds.map((kind) => (
@@ -48,8 +46,7 @@ const Create = (props) => {
                         ))}
                         </select>
                     </div>
-                                    
-                    <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md">send</button>
+                    <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md my-2.5 flex flex-col flex items-center">send</button>
                 </form>
                 
                 <Link href="/home/strategy">戻る</Link>

@@ -10,6 +10,8 @@ const Strategy = (props) => {
             onBefore: () => confirm("本当に削除しますか？"),
         })
     }
+    
+    console.log(strategies);
 
     return (
         <Authenticated auth={props.auth} header={
@@ -30,8 +32,7 @@ const Strategy = (props) => {
                             <Link href={`/home//strategy/${strategy.id}`}>{ strategy.name }</Link>
                         </h2>
                         <p>{ strategy.text }</p>
-                        <p>{ strategy.name }</p>
-                        
+                        <p>{ strategy.kind.name }</p>
                         
                         <button className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md" onClick={() => handleDeleteStrategy(strategy.id)}>delete</button>
                         <p>-----------------------------------------------------------------------------</p>

@@ -21,11 +21,11 @@ const Create = (props) => {
                 </h2>
             }>
             
-            <div className="p-12">
+            <div className="p-12 flex flex-col flex items-center flex flex-col">
                 
                 {/* onSubmitを追記し、送信用関数を設定 */}
                 <form onSubmit={handleSendKinds}>
-                    <div>
+                    <div class="flex flex-col flex items-center">
                         <h2>name</h2>
                         <input type="text" placeholder="name" onChange={(e) => setData("name", e.target.value)}/>
                         <span className="text-red-600">{props.errors.name}</span>

@@ -20,16 +20,16 @@ const Edit = (props) => {
                 </h2>
             }>
             
-            <div className="p-12">
+            <div className="p-12 flex flex-col flex items-center flex flex-col">
                 
                 <form onSubmit={handleSendKinds}>
-                    <div>
+                    <div class="flex flex-col flex items-center">
                         <h2>name</h2>
                         <input type="text" placeholder="name" value={data.name} onChange={(e) => setData("name", e.target.value)}/>
                         <span className="text-red-600">{props.errors.name}</span>
                     </div>                    
                     
-                    <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md">send</button>
+                    <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md my-2.5">send</button>
                 </form>
                 
                 <Link href="/home/kind">戻る</Link>
