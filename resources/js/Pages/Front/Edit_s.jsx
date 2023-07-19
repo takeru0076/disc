@@ -13,7 +13,8 @@ const Edit = (props) => {
         e.preventDefault();
         put(`/home/strategy/${strategy.id}`);
     }
-
+    console.log(strategy);
+    
     return (
         <Authenticated auth={props.auth} header={
                 <h2 className="font-semibold text-xl text-gray-800 leading-tight">
@@ -21,19 +22,23 @@ const Edit = (props) => {
                 </h2>
             }>
             
-            <div className="p-12">
-                
+            <div className="p-12 flex flex-col flex items-center flex flex-col">
                 <form onSubmit={handleSendStrategies}>
-                    <div>
+                    <div classname="flex flex-col flex items-center">
                         <h2>name</h2>
                         <input type="text" placeholder="タイトル" value={data.name} onChange={(e) => setData("name", e.target.value)}/>
                         <span className="text-red-600">{props.errors.name}</span>
-                    </div>                    
-                    
-                    <div>
+                        
                         <h2>text</h2>
                         <textarea placeholder="今日も1日お疲れさまでした。" value={data.text} onChange={(e) => setData("text", e.target.value)}></textarea>
                         <span className="text-red-600">{props.errors.text}</span>
+                    
+                       {/*<h2>Kind</h2>
+                        <select onChange={e => setData("kind_id", e.target.value)}>
+                        {strategy.kind.map((kind) => (
+                            <option value={kind.id}>{kind.name}</option>
+                        ))}
+                        </select>-*/}
                     </div>
                     
                     <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md">send</button>

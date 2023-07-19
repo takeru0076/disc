@@ -12,15 +12,17 @@ const Show = (props) => {
                 </h2>
             }>
             
-            <div className="p-12">
-                <h1>{ kind.name }</h1>
-                
-                <div>
-                    <Link href={`/home/kind/${kind.id}/edit`}>編集</Link>
-                </div>
-                
-                <div>
-                    <Link href="/home/kind/">戻る</Link>
+            <div className="p-12 flex flex-col flex items-center flex flex-col">
+                <div class="flex flex-col flex items-center">
+                    <h1>{ kind.name }</h1>
+                    
+                    <div>
+                        <Link href={`/home/kind/${kind.id}/edit`}>編集</Link>
+                    </div>
+                    
+                    <div>
+                        <Link href="/home/kind/">戻る</Link>
+                    </div>
                 </div>
             </div>
             
