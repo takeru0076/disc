@@ -17,7 +17,7 @@ const Create = (props) => {
         post("/home/strategy");
     }
     
-    console.log(data);
+    console.log(kinds);
 
     return (
         <Authenticated auth={props.auth} header={

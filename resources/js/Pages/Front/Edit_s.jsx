@@ -4,16 +4,18 @@ import Authenticated from "@/Layouts/AuthenticatedLayout";
 
 const Edit = (props) => {
     const {strategy} = props;
+    const {kinds} = props;
     const {data, setData, put} = useForm({
         name: strategy.name,
-        text: strategy.text
+        text: strategy.text,
     })
 
     const handleSendStrategies = (e) => {
         e.preventDefault();
         put(`/home/strategy/${strategy.id}`);
     }
-    console.log(strategy);
+    console.log(kinds);
+    //console.log(strategy);
     
     return (
         <Authenticated auth={props.auth} header={
@@ -33,12 +35,12 @@ const Edit = (props) => {
                         <textarea placeholder="今日も1日お疲れさまでした。" value={data.text} onChange={(e) => setData("text", e.target.value)}></textarea>
                         <span className="text-red-600">{props.errors.text}</span>
                     
-                       {/*<h2>Kind</h2>
+                       <h2>Kind</h2>
                         <select onChange={e => setData("kind_id", e.target.value)}>
-                        {strategy.kind.map((kind) => (
+                        {kinds.map((kind) => (
                             <option value={kind.id}>{kind.name}</option>
                         ))}
-                        </select>-*/}
+                        </select>
                     </div>
                     
                     <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md">send</button>

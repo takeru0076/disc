@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Kind;
+use App\Models\Strategy;
 use App\Http\Requests\KindRequest;
 
 class KindController extends Controller
@@ -27,9 +28,9 @@ class KindController extends Controller
         return redirect("/home/kind/" . $kind->id);
     }
     
-        public function show(Kind $kind)
+        public function show(Kind $kind, Strategy $strategy)
     {
-        return Inertia::render("Front/Show_k", ["kind" => $kind]);
+        return Inertia::render("Front/Show_k", ["kind" => $kind,"strategies" => $strategy->get()]);
     }
     
     

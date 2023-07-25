@@ -4,6 +4,13 @@ import { Link } from '@inertiajs/react';
 
 const Show = (props) => {
     const { kind } = props; 
+    let { strategies } = props;
+    
+    strategies = strategies.filter((strategy)=>{
+        return strategy.kind_id == kind.id;
+    });
+
+    console.log(strategies);
 
     return (
         <Authenticated auth={props.auth} header={
@@ -15,6 +22,15 @@ const Show = (props) => {
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 <div class="flex flex-col flex items-center">
                     <h1>{ kind.name }</h1>
+                    
+                    { strategies.map((strategy) => (
+                        <div key={strategy.id} class="flex flex-col flex items-center">
+                            <h2>
+                                <Link href={`/home//strategy/${strategy.id}`}>{ strategy.name }</Link>
+                            </h2>
+                            <p>-----------------------------------------------------------------------------</p>
+                        </div>
+                    )) }
                     
                     <div>
                         <Link href={`/home/kind/${kind.id}/edit`}>編集</Link>
