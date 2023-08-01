@@ -11,4 +11,9 @@ class HomeController extends Controller
     {
         return Inertia::render("Front/Home");
     }
+    
+    public function whiteboard()
+    {
+        return Inertia::render("Front/Whiteboard");
+    }
 }
