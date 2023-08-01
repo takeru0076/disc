@@ -14,3 +14,38 @@ h3 {
 a {
   @apply text-blue-600 underline;
 }
+
+/* UltimateCourt.css */
+
+.ultimate-court {
+  position: relative;
+  width: 100vw; /* 幅を100vwに設定 */
+  height: calc(100vw * 37 / 100); /* 高さを100vw * 37 / 100に設定 */
+  max-width: 1000px; /* 最大幅を1000pxに制限 */
+  background-color: #84cc16;
+  border: 2px solid #fff;
+  margin: 5vh auto;
+  overflow: hidden; /* 親要素からはみ出た要素を非表示にするためにオーバーフローを隠す */
+}
+
+/* 左の白線 */
+.ultimate-court::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18%;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* 右の白線 */
+.ultimate-court::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 18%;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+}

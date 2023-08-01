@@ -31,6 +31,7 @@ Route::group(["middleware" => ["auth"]], function() {
        //return Inertia::render("Front/Home");
    //}) ;
    Route::get("/home", [HomeController::class, "home"]);
+   Route::get("/home/whiteboard", [HomeController::class, "whiteboard"]);
 });
 
 Route::group(["middleware" => ["auth"]], function() {
