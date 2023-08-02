@@ -25,28 +25,27 @@ const Edit = (props) => {
             }>
             
             <div className="p-12 flex flex-col flex items-center flex flex-col">
-                <form onSubmit={handleSendStrategies}>
+                <form onSubmit={handleSendStrategies} class="flex flex-col flex items-center">
                     <div classname="flex flex-col flex items-center">
                         <h2>name</h2>
-                        <input type="text" placeholder="タイトル" value={data.name} onChange={(e) => setData("name", e.target.value)}/>
+                        <input type="text" placeholder="Input a title." value={data.name} onChange={(e) => setData("name", e.target.value)}/>
                         <span className="text-red-600">{props.errors.name}</span>
-                        
+                            
                         <h2>text</h2>
-                        <textarea placeholder="今日も1日お疲れさまでした。" value={data.text} onChange={(e) => setData("text", e.target.value)}></textarea>
+                        <textarea placeholder="Input a text." value={data.text} onChange={(e) => setData("text", e.target.value)}></textarea>
                         <span className="text-red-600">{props.errors.text}</span>
-                    
-                       <h2>Kind</h2>
+                        
+                        <h2>kind</h2>
                         <select onChange={e => setData("kind_id", e.target.value)}>
                         {kinds.map((kind) => (
                             <option value={kind.id}>{kind.name}</option>
                         ))}
                         </select>
                     </div>
-                    
-                    <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md">send</button>
+                    <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md my-2.5 flex flex-col flex items-center">send</button>
                 </form>
-                
-                <Link href="/home/strategy">戻る</Link>
+                    
+                <Link href="/home/strategy" className="custom-button text-xl mb-4">back</Link>
             </div>
             
         </Authenticated>

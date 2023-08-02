@@ -24,20 +24,24 @@ const Show = (props) => {
                     <h1>{ kind.name }</h1>
                     
                     { strategies.map((strategy) => (
-                        <div key={strategy.id} class="flex flex-col flex items-center">
+                        <div key={strategy.id} class="flex flex-col flex items-center no-under line">
                             <h2>
-                                <Link href={`/home//strategy/${strategy.id}`}>{ strategy.name }</Link>
+                                <Link href={`/home//strategy/${strategy.id}`} class="no-underline">{ strategy.name }</Link>
                             </h2>
                             <p>-----------------------------------------------------------------------------</p>
                         </div>
                     )) }
                     
-                    <div>
-                        <Link href={`/home/kind/${kind.id}/edit`}>編集</Link>
-                    </div>
+                    <br></br>
                     
                     <div>
-                        <Link href="/home/kind/">戻る</Link>
+                        <Link href={`/home/kind/${kind.id}/edit`} className="custom-button text-xl mb-4">edit</Link>
+                    </div>
+                    
+                    <br></br>
+                    
+                    <div>
+                        <Link href="/home/kind/" className="custom-button text-xl mb-4">back</Link>
                     </div>
                 </div>
             </div>

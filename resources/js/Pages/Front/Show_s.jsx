@@ -14,22 +14,24 @@ const Show = (props) => {
             
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 <div classname="flex flex-col flex items-center">
-                    <h1>{ strategy.name }</h1>
+                    <h1>title:{ strategy.name }</h1>
                     
                     <div>
-                        <p>{ strategy.text }</p>
+                        <p>text:{ strategy.text }</p>
                     </div>
                     
                     <div>
-                        <p>{ strategy.kind.name }</p>
+                        <p class="mb-4">kind name:{ strategy.kind.name }</p>
                     </div>
                     
                     <div>
-                        <Link href={`/home/strategy/${strategy.id}/edit`}>編集</Link>
+                        <Link href={`/home/strategy/${strategy.id}/edit`} className="custom-button text-xl mb-4">edit</Link>
                     </div>
                     
+                    <br></br>
+                    
                     <div>
-                        <Link href="/home/strategy/">戻る</Link>
+                        <Link href="/home/strategy/" className="custom-button text-xl mb-4">back</Link>
                     </div>
                 </div>
             </div>

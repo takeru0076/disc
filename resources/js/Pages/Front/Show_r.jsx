@@ -14,10 +14,10 @@ const Show = (props) => {
             
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 <div classname="flex flex-col flex items-center">
-                    <h1>{ rule.title }</h1>
+                    <h1>title:{ rule.title }</h1>
                     
                     <div>
-                        <p>{ rule.text }</p>
+                        <p>text:{ rule.text }</p>
                     </div>
                     
                     <div>
@@ -25,12 +25,16 @@ const Show = (props) => {
                         <Link href={`${rule.url}`}>url</Link>
                     </div>
                     
-                    <div>
-                        <Link href={`/home/rule/${rule.id}/edit`}>編集</Link>
-                    </div>
+                    <br></br>
                     
                     <div>
-                        <Link href="/home/rule/">戻る</Link>
+                        <Link href={`/home/rule/${rule.id}/edit`} className="custom-button text-xl mb-4">edit</Link>
+                    </div>
+                    
+                    <br></br>
+                    
+                    <div>
+                        <Link href="/home/rule/" className="custom-button text-xl mb-4">back</Link>
                     </div>
                 </div>
             </div>
