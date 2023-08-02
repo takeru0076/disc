@@ -14,24 +14,27 @@ const Show = (props) => {
             
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 <div class="flex flex-col flex items-center">
-                    <h1>{ other.title }</h1>
+                    <h1>title:{ other.title }</h1>
                     
                     <div>
-                        <h3>本文</h3>
-                        <p>{ other.text }</p>
+                        <p>text:{ other.text }</p>
                     </div>
                     
                     <div>
                         <h3></h3>
-                        <Link href={`${other.url}`}>url</Link>
+                        <Link href={`${other.url}`} class="no-underline">url</Link>
                     </div>
                     
-                    <div>
-                        <Link href={`/home/other/${other.id}/edit`}>編集</Link>
-                    </div>
+                    <br></br>
                     
                     <div>
-                        <Link href="/home/other/">戻る</Link>
+                        <Link href={`/home/other/${other.id}/edit`} className="custom-button text-xl mb-4">edit</Link>
+                    </div>
+                    
+                     <br></br>
+                    
+                    <div>
+                        <Link href="/home/other/" className="custom-button text-xl mb-4">back</Link>
                     </div>
                 </div>
             </div>

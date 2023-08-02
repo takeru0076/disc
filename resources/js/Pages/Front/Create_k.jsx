@@ -24,7 +24,7 @@ const Create = (props) => {
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 
                 {/* onSubmitを追記し、送信用関数を設定 */}
-                <form onSubmit={handleSendKinds}>
+                <form onSubmit={handleSendKinds} class="flex flex-col flex items-center">
                     <div class="flex flex-col flex items-center">
                         <h2>name</h2>
                         <input type="text" placeholder="name" onChange={(e) => setData("name", e.target.value)}/>
@@ -34,7 +34,7 @@ const Create = (props) => {
                     <button type="submit" className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md my-2.5">send</button>
                 </form>
                 
-                <Link href="/home/kind">戻る</Link>
+                <Link href="/home/kind" className="custom-button text-xl mb-4">back</Link>
             </div>
             
         </Authenticated>
