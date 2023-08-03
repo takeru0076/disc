@@ -41,7 +41,7 @@ class RuleController extends Controller
     public function update(RuleRequest $request, Rule $rule)
     {
         $input = $request->all();
-        $other->fill($input)->save();
+        $rule->fill($input)->save();
         return redirect("/home/rule/" . $rule->id);
     }
     

@@ -38,6 +38,9 @@ const Create = (props) => {
                         <h2>text</h2>
                         <textarea placeholder="Input a text." onChange={(e) => setData("text", e.target.value)}></textarea>
                         <span className="text-red-600">{props.errors.text}</span>
+                        
+                        <h2>url</h2>
+                        <textarea placeholder="Not required" onChange={(e) => setData("url", e.target.value)}></textarea>
                     
                         <h2>kind</h2>
                         <select onChange={e => setData("kind_id", e.target.value)}>
