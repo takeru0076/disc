@@ -4,6 +4,10 @@ import { Link } from '@inertiajs/react';
 import '/resources/css/app.css';
 import MovingObject from './MovingObject';
 
+const coordinate = [
+  {x:310, y:230},{x:1100, y:230},{x:710,y:440}
+  ]
+
 const Whiteboard = (props) => {
   const { posts } = props;
 
@@ -12,11 +16,11 @@ const Whiteboard = (props) => {
   };
 
   const [objects, setObjects] = useState(() =>
-    Array.from({ length: 14 }, (_, index) => ({
+    Array.from({ length: 15 }, (_, index) => ({
       id: index + 1,
-      x: getRandomPosition(0, window.innerWidth - 30),
-      y: getRandomPosition(0, window.innerHeight - 30),
-      color: index < 7 ? 'blue' : index === 13 ? 'black' : 'pink',
+      x: index < 7 ? coordinate[0].x : index === 14 ? coordinate[2].x: coordinate[1].x, 
+      y: index < 7 ? coordinate[0].y + index * 60 : index === 14 ? coordinate[2].y: coordinate[1].y + (index - 7 ) * 60, 
+      color: index < 7 ? 'blue' : index === 14 ? 'black' : 'pink',
     }))
   );
 
@@ -48,7 +52,7 @@ const Whiteboard = (props) => {
         </h2>
       }
     >
-      <div className="ultimate-court"></div>
+      <div className="court"></div>
 
       <div
         style={{ width: '100%', height: '100%', overflow: 'hidden' }}

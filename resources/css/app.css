@@ -15,9 +15,7 @@ a {
   @apply text-blue-600 underline;
 }
 
-/* UltimateCourt.css */
-
-.ultimate-court {
+.court {
   position: relative;
   width: 100vw; /* 幅を100vwに設定 */
   height: calc(100vw * 37 / 100); /* 高さを100vw * 37 / 100に設定 */
@@ -29,7 +27,7 @@ a {
 }
 
 /* 左の白線 */
-.ultimate-court::before {
+.court::before {
   content: '';
   position: absolute;
   top: 0;
@@ -40,7 +38,7 @@ a {
 }
 
 /* 右の白線 */
-.ultimate-court::after {
+.court::after {
   content: '';
   position: absolute;
   top: 0;
