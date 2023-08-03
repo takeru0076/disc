@@ -10,6 +10,7 @@ const MovingObject = ({ x, y, isSelected, color, onClick }) => {
     onClick();
     isDraggingRef.current = true;
     prevMousePositionRef.current = { x: e.clientX, y: e.clientY };
+    console.log(e.clientX,e.clientY)
   };
 
   const handleMouseMove = (e) => {
