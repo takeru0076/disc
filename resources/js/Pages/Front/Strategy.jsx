@@ -32,6 +32,7 @@ const Strategy = (props) => {
                             <Link href={`/home//strategy/${strategy.id}`} class="no-underline">title:{ strategy.name }</Link>
                         </h2>
                         <p>text:{ strategy.text }</p>
+                        <a href={strategy.url} class="no-underline">url</a>
                         <p>kind name:{ strategy.kind.name }</p>
                         <p>user name:{ strategy.user.name }</p>
                         

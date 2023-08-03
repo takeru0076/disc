@@ -21,6 +21,11 @@ const Show = (props) => {
                     </div>
                     
                     <div>
+                        <h3></h3>
+                        <Link href={`${strategy.url}`} class="no-underline">url</Link>
+                    </div>
+                    
+                    <div>
                         <p class="mb-4">kind name:{ strategy.kind.name }</p>
                     </div>
                     

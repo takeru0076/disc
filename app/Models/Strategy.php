@@ -12,6 +12,7 @@ class strategy extends Model
      protected $fillable = [
         "name",
         "text",
+        "url",
         "kind_id",
         "user_id"
     ];
