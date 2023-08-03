@@ -9,6 +9,8 @@ const Edit = (props) => {
         text: rule.text,
         url: rule.url
     })
+    
+    console.log(rule)
 
     const handleSendOthers = (e) => {
         e.preventDefault();
