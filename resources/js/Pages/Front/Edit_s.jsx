@@ -8,15 +8,18 @@ const Edit = (props) => {
     const {data, setData, put} = useForm({
         name: strategy.name,
         text: strategy.text,
-        url: strategy.url
+        url: strategy.url,
+        kind_name:strategy.kind.name
     })
+    
+    //console.log(props)
 
     const handleSendStrategies = (e) => {
         e.preventDefault();
         put(`/home/strategy/${strategy.id}`);
     }
-    console.log(kinds);
-    //console.log(strategy);
+    //console.log(kinds);
+    console.log(strategy)
     
     return (
         <Authenticated auth={props.auth} header={
@@ -40,7 +43,10 @@ const Edit = (props) => {
                         <textarea placeholder="Input a url." value={data.url} onChange={(e) => setData("url", e.target.value)}></textarea>
                         <span className="text-red-600">{props.errors.url}</span>
                         
-                        <h2>kind</h2>
+                         <p class="mb-4">old kind:{ strategy.kind.name }</p>
+                        
+                        
+                        <h2>new kind</h2>
                         <select onChange={e => setData("kind_id", e.target.value)}>
                         {kinds.map((kind) => (
                             <option value={kind.id}>{kind.name}</option>

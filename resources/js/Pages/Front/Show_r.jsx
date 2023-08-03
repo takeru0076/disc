@@ -1,6 +1,6 @@
 import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import { Link } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react'
 
 const Show = (props) => {
     const { rule } = props; 
@@ -22,7 +22,7 @@ const Show = (props) => {
                     
                     <div>
                         <h3></h3>
-                        <Link href={`${rule.url}`}>url</Link>
+                        <a href={rule.url}>url</a>
                     </div>
                     
                     <br></br>

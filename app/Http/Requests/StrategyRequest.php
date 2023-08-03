@@ -15,7 +15,7 @@ class StrategyRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:50',
-            'text' => 'required|string|max:200',
+            'text' => 'required|string|max:1000',
         ];
     }
 }

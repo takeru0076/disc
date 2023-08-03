@@ -1,9 +1,10 @@
 import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import { Link } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react'
 
 const Show = (props) => {
     const { strategy } = props; 
+    console.log(strategy)
 
     return (
         <Authenticated auth={props.auth} header={
@@ -22,7 +23,7 @@ const Show = (props) => {
                     
                     <div>
                         <h3></h3>
-                        <Link href={`${strategy.url}`} class="no-underline">url</Link>
+                        <a href={strategy.url} class="no-underline">url</a>
                     </div>
                     
                     <div>
