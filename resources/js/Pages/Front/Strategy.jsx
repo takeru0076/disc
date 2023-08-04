@@ -21,9 +21,8 @@ const Strategy = (props) => {
             }>
 
             <div className="p-12 flex flex-col flex items-center flex flex-col">
-                <Link href="/home/strategy/create" class="no-underline">create</Link>
-
-                <h1>disc</h1>
+                <Link href="/home/strategy/create" className="custom-button text-xl mb-4">create</Link>
+                
                 <p>-----------------------------------------------------------------------------</p>
 
                 { strategies.map((strategy) => (

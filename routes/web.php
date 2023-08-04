@@ -26,12 +26,8 @@ use App\Http\Controllers\HomeController;
 //})->where('any', '.*');    この3行をコメントアウト
 
 Route::group(["middleware" => ["auth"]], function() {
-
-   //Route::get("/home", function() {
-       //return Inertia::render("Front/Home");
-   //}) ;
    Route::get("/home", [HomeController::class, "home"]);
-   Route::get("/home/whiteboard", [HomeController::class, "whiteboard"]);
+   Route::get("/home/whiteboard", [HomeController::class, "whiteboard"])->name('home.whiteboard');
 });
 
 Route::group(["middleware" => ["auth"]], function() {
@@ -54,7 +50,7 @@ Route::group(["middleware" => ["auth"]], function() {
 
 Route::group(["middleware" => ["auth"]], function() {
     
-     Route::get("/home/kind", [KindController::class, "kind"]);
+     Route::get("/home/kind", [KindController::class, "kind"])->name('home.kind');
     
      Route::post("/home/kind", [KindController::class, "store"]);
      
@@ -72,7 +68,7 @@ Route::group(["middleware" => ["auth"]], function() {
 
 Route::group(["middleware" => ["auth"]], function() {
     
-     Route::get("/home/rule", [RuleController::class, "rule"]);
+     Route::get("/home/rule", [RuleController::class, "rule"])->name('home.rule');
     
      Route::post("/home/rule", [RuleController::class, "store"]);
      
@@ -90,7 +86,7 @@ Route::group(["middleware" => ["auth"]], function() {
 
 Route::group(["middleware" => ["auth"]], function() {
 
-     Route::get("/home/other", [OtherController::class, "other"]);
+     Route::get("/home/other", [OtherController::class, "other"])->name('home.other');
     
      Route::post("/home/other", [OtherController::class, "store"]);
      
