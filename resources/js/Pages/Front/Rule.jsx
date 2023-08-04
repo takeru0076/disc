@@ -19,9 +19,8 @@ const Rule = (props) => {
             }>
 
             <div className="p-12 flex flex-col flex items-center flex flex-col">
-                <Link href="/home/rule/create" class="no-underline">create</Link>
+                <Link href="/home/rule/create" className="custom-button text-xl mb-4">create</Link>
 
-                <h1>disc</h1>
                 <p>-----------------------------------------------------------------------------</p>
 
                 { rules.map((rule) => (
