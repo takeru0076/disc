@@ -32,8 +32,6 @@ Route::group(["middleware" => ["auth"]], function() {
 
 Route::group(["middleware" => ["auth"]], function() {
     
-     Route::get("/home", [StrategyController::class, "home"]);
-    
      Route::get("/home/strategy", [StrategyController::class, "strategy"])->name('home.strategy');
      
      Route::post("/home/strategy", [StrategyController::class, "store"]);
