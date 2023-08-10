@@ -2,7 +2,7 @@ import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
 //import { useNavigate } from "react-router-dom";
 //import { BrowserRouter, Route, Routes } from 'react-router-dom';　//追加したところ
-import { Link } from '@inertiajs/react'; //追加したところ
+import { Link , Head } from '@inertiajs/react'; //追加したところ
 import '/resources/css/app.css';
 
 const Home = (props) => {
@@ -14,6 +14,9 @@ const Home = (props) => {
                     Home
                 </h2>
             }>
+            
+            <Head title="Home" />
+            
             <div className="p-12">
                 <div class="flex flex-col flex items-center">
                     <Link href="/home/strategy" className="custom-button text-xl mb-4">Strategy</Link>
