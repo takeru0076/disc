@@ -1,6 +1,6 @@
 import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import { Link, router } from '@inertiajs/react'
+import { Link, router, Head } from '@inertiajs/react'
 
 const Strategy = (props) => {
     const { strategies } = props; 
@@ -19,6 +19,8 @@ const Strategy = (props) => {
                     Strategy
                 </h2>
             }>
+            
+            <Head title="Strategy" />
 
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 <Link href="/home/strategy/create" className="custom-button text-xl mb-4">create</Link>

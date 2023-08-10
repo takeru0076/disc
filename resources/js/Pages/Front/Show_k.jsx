@@ -1,6 +1,6 @@
 import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import { Link } from '@inertiajs/react';
+import { Link, Head } from '@inertiajs/react';
 
 const Show = (props) => {
     const { kind } = props; 
@@ -18,6 +18,8 @@ const Show = (props) => {
                     Kind
                 </h2>
             }>
+            
+            <Head title="Show_kind" />
             
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 <div class="flex flex-col flex items-center">

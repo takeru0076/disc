@@ -1,6 +1,6 @@
 import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import { Link, router } from '@inertiajs/react'
+import { Link, router, Head } from '@inertiajs/react'
 
 const Rule = (props) => {
     const { rules } = props; 
@@ -17,6 +17,8 @@ const Rule = (props) => {
                 Rule
                 </h2>
             }>
+            
+            <Head title="Rule" />
 
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 <Link href="/home/rule/create" className="custom-button text-xl mb-4">create</Link>

@@ -1,6 +1,6 @@
 import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import { Link, router } from '@inertiajs/react'
+import { Link, router, Head } from '@inertiajs/react'
 
 const Show = (props) => {
     const { rule } = props; 
@@ -11,6 +11,8 @@ const Show = (props) => {
                     Rule
                 </h2>
             }>
+            
+            <Head title="Show_rule" />
             
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 <div classname="flex flex-col flex items-center">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import { Link } from '@inertiajs/react';
+import { Link, Head } from '@inertiajs/react';
 import '/resources/css/app.css';
 import MovingObject from './MovingObject';
 
@@ -52,6 +52,9 @@ const Whiteboard = (props) => {
         </h2>
       }
     >
+    
+    <Head title="Whiteboard" />
+    
       <div className="court"></div>
 
       <div
