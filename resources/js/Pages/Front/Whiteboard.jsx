@@ -71,7 +71,7 @@ const Whiteboard = (props) => {
       </div>
       
       <div class="flex flex-col flex items-center">
-        <Link href="/home/" className="custom-button text-xl mb-4"> Home </Link>
+        <Link href="/home" className="custom-button text-xl mb-4"> Home </Link>
       </div>
       
     </Authenticated>
