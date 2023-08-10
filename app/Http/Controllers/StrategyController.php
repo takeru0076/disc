@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Auth;
 
 class StrategyController extends Controller
 {
+    
+    public function home()
+    {
+        return Inertia::render("Front/Home");
+    }
+    
     public function strategy(Strategy $strategy)
     {
         return Inertia::render("Front/Strategy",["strategies" => $strategy::with("kind" , "user")->get()]);
