@@ -28,7 +28,7 @@ const Other = (props) => {
             { others.map((other) => (
                 <div key={other.id} className="flex flex-col items-center">
                     <h2>
-                        <Link href={`/home//other/${other.id}`} className="no-underline">title:{ other.title }</Link>
+                        <Link href={`/home/other/${other.id}`} className="no-underline">title:{ other.title }</Link>
                     </h2>
                     <p>text:{ other.text }</p>
                     {other.url && (
