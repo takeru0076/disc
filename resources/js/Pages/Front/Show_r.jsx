@@ -38,7 +38,7 @@ const Show = (props) => {
                 <br></br>
                 
                 <div>
-                    <Link href="/home/rule/" className="custom-button text-xl mb-4">back</Link>
+                    <Link href="/home/rule" className="custom-button text-xl mb-4">back</Link>
                 </div>
             </div>
         </div>

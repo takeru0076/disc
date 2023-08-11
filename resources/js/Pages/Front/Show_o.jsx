@@ -1,6 +1,6 @@
 import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import { Link, Head } from '@inertiajs/react';
+import { Link, Head } from '@inertiajs/react'
 
 const Show = (props) => {
     const { other } = props; 
@@ -8,11 +8,11 @@ const Show = (props) => {
     return (
         <Authenticated auth={props.auth} header={
             <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-                Other
+                Rule
             </h2>
         }>
         
-        <Head title="Show_other" />
+        <Head title="Show_rule" />
         
         <div className="p-12 flex flex-col items-center">
             <div className="flex flex-col items-center">
@@ -25,7 +25,7 @@ const Show = (props) => {
                 {other.url && (
                     <div>
                         <h3></h3>
-                        <a href={other.url} className="no-underline">url</a>
+                        <a href={other.url}>url</a>
                     </div>
                 )}
                 
@@ -38,11 +38,10 @@ const Show = (props) => {
                 <br></br>
                 
                 <div>
-                    <Link href="/home/other/" className="custom-button text-xl mb-4">back</Link>
+                    <Link href="/home/other" className="custom-button text-xl mb-4">back</Link>
                 </div>
             </div>
         </div>
-        
     </Authenticated>
     );
 }

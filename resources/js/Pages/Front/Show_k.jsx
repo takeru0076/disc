@@ -43,7 +43,7 @@ const Show = (props) => {
                     <br></br>
                     
                     <div>
-                        <Link href="/home/kind/" className="custom-button text-xl mb-4">back</Link>
+                        <Link href="/home/kind" className="custom-button text-xl mb-4">back</Link>
                     </div>
                 </div>
             </div>
