@@ -28,7 +28,7 @@ const Kind = (props) => {
                 { kinds.map((kind) => (
                     <div key={kind.id} class="flex flex-col flex items-center">
                         <h2>
-                            <Link href={`/home//kind/${kind.id}`} class ="no-underline">{ kind.name }</Link>
+                            <Link href={`/home/kind/${kind.id}`} class ="no-underline">{ kind.name }</Link>
                         </h2>
                         
                         <button className="p-1 bg-purple-300 hover:bg-purple-400 rounded-md" onClick={() => handleDeleteKind(kind.id)}>delete</button>
