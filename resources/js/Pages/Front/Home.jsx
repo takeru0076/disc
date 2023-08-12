@@ -1,7 +1,5 @@
 import React from "react";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-//import { useNavigate } from "react-router-dom";
-//import { BrowserRouter, Route, Routes } from 'react-router-dom';　//追加したところ
 import { Link , Head } from '@inertiajs/react'; //追加したところ
 import '/resources/css/app.css';
 
