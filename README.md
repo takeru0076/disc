@@ -55,15 +55,14 @@ LINEのノート機能でもいいという意見が出そうですが、チー�
 ## データ構成
 
 ### 「テーブル構成・リレーション」:
-![ER_diagram.jpg](https://boostnote.io/api/teams/kghHunaUm/files/b225b92721698eee5754906d98fa06b44f309cb06986ad2f1228b666fb23e9a8-ER_diagram.jpg)
+![ER_diagram.jpg](./ER_diagram.jpg)
 
 ### 各テーブル詳細：
-![スクリーンショット 2023-08-13 7.54.21.png](https://boostnote.io/api/teams/kghHunaUm/files/2638b0d151b72eacb6c04b0e7e6685157b9f79073180dccfef9c7b79319b7213-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202023-08-13%207.54.21.png)
-![スクリーンショット 2023-08-13 7.54.13.png](https://boostnote.io/api/teams/kghHunaUm/files/e1eee2d243eb6144bf5d31c482bdbbe7dfe71383aedc7a53ebfcdbd25fd15c4c-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202023-08-13%207.54.13.png)
-![スクリーンショット 2023-08-13 7.52.42.png](https://boostnote.io/api/teams/kghHunaUm/files/84008634681ea7771415512fc8a08df392a3999facde21a172a48912c3a350b3-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202023-08-13%207.52.42.png)
-![スクリーンショット 2023-08-13 7.54.01.png](https://boostnote.io/api/teams/kghHunaUm/files/8ef5bf9d663c27212d3128f9c911b37a2536a2be946774744dbd513c2b3fa9a2-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202023-08-13%207.54.01.png)
-![スクリーンショット 2023-08-13 7.53.00.png](https://boostnote.io/api/teams/kghHunaUm/files/21e35b5561991d2e16d5bb7f2210e4aee87585bb8128f1ffdc5dd4dbc447f0a6-%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202023-08-13%207.53.00.png)
-
+![users.png](./users.png). 
+![strategies.png](./strategies.png). 
+![kinds.png](./kinds.png). 
+![rules.png](./rules.png). 
+![others.png](./others.png). 
 
 ## 機能
 
