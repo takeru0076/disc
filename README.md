@@ -1,5 +1,4 @@
-# [Bulletin board for DualBoot
-](https://discmyapp-e131419ad102.herokuapp.com)
+# [Bulletin board for DualBoot](https://discmyapp-e131419ad102.herokuapp.com)
 
 ---
 <br>
