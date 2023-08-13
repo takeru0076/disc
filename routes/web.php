@@ -21,10 +21,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-//Route::get('/{any}', function () {
-  //  return view('app');
-//})->where('any', '.*');    この3行をコメントアウト
-
 Route::group(["middleware" => ["auth"]], function() {
    Route::get("/home", [HomeController::class, "home"])->name('home');
    Route::get("/home/whiteboard", [HomeController::class, "whiteboard"])->name('home.whiteboard');
