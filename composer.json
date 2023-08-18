@@ -13,6 +13,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/socialite": "^5.8",
         "laravel/tinker": "^2.7",
+        "socialiteproviders/line": "^4.1",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {

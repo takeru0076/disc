@@ -40,10 +40,9 @@ class StrategyController extends Controller
     }
     
     
-    public function edit(Strategy $strategy, Kind $kind)
-    {
-        return Inertia::render("Front/Edit_s", ["strategy" => $strategy::with("kind")->first(), "kinds" => $kind->get()]);
-    }
+   public function edit(Strategy $strategy, Kind $kind){
+    return Inertia::render("Front/Edit_s", ["strategy" => $strategy->load('kind'),"kinds" => $kind->get()]);
+}
         
     public function update(StrategyRequest $request, Strategy $strategy)
     {
