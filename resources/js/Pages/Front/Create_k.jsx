@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useForm } from '@inertiajs/react';
+import { Link, useForm, Head } from '@inertiajs/react';
 import Authenticated from "@/Layouts/AuthenticatedLayout";
 
 const Create = (props) => {
@@ -20,6 +20,8 @@ const Create = (props) => {
                     Create
                 </h2>
             }>
+            
+            <Head title="Create_kind" />
             
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 

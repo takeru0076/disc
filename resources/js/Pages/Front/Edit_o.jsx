@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useForm } from '@inertiajs/react';
+import { Link, useForm, Head } from '@inertiajs/react';
 import Authenticated from "@/Layouts/AuthenticatedLayout";
 
 const Edit = (props) => {
@@ -21,6 +21,8 @@ const Edit = (props) => {
                     Edit
                 </h2>
             }>
+            
+            <Head title="Edit_other" />
             
             <div className="p-12 flex flex-col flex items-center flex flex-col">
                 

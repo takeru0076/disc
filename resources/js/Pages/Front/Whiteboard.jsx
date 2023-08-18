@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import { Link } from '@inertiajs/react';
+import { Link, Head } from '@inertiajs/react';
 import '/resources/css/app.css';
 import MovingObject from './MovingObject';
 
@@ -52,6 +52,9 @@ const Whiteboard = (props) => {
         </h2>
       }
     >
+    
+    <Head title="Whiteboard" />
+    
       <div className="court"></div>
 
       <div
@@ -71,7 +74,7 @@ const Whiteboard = (props) => {
       </div>
       
       <div class="flex flex-col flex items-center">
-        <Link href="/home/" className="custom-button text-xl mb-4"> Home </Link>
+        <Link href="/home" className="custom-button text-xl mb-4"> Home </Link>
       </div>
       
     </Authenticated>

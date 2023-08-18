@@ -15,8 +15,8 @@ class OtherRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:50',
-            'text' => 'required|string|max:200', 
-            'url' => 'required|string|max:1000',
+            'text' => 'required|string|max:200',
+            //'url' => 'required|string|max:1000',
         ];
     }
 }

@@ -52,4 +52,3 @@ class OtherController extends Controller
     }
 
 }
-
