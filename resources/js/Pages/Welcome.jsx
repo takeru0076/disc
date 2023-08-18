@@ -45,6 +45,7 @@ export default function Welcome(props) {
                         </>
                     )}
                 {/*</div>*/}
+                <Link href={route('linelogin')}>LINEログイン</Link>
             </div>
 
             <style>{`

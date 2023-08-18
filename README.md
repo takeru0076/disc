@@ -1,4 +1,5 @@
 # [Bulletin board for DualBoot](https://discmyapp-e131419ad102.herokuapp.com)
+dev_basis18
 
 
 <br>
@@ -24,7 +25,7 @@ LINEのノート機能でもいいという意見が出そうですが、チー�
 
 
 また、記録機能に加え、ホワイトボードも実装しました。
-スマホ一台あればどこでも作戦会議ができます。
+パソコン一台あればどこでも作戦会議ができます。
 
 [アプリを使ってみる](https://discmyapp-e131419ad102.herokuapp.com)
 
